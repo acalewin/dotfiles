@@ -1,0 +1,6 @@
+General files of interest to a few other people.
+
+Awesome config with a conkyrc that adds a pretty generic info bar to the bottom of the window.
+The only thing of note that it has is a script to pull current reviews and lessons from WaniKani.
+
+Edit the WK script and fill in your API where indicated. I have it running out of cron every five minutes and writing to a file in tmp.
