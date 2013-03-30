@@ -3,12 +3,12 @@
 
 import urllib
 import urllib.request
-import simplejson
+import json
 import datetime
 import time;
 
 url='http://www.wanikani.com/api/user/<apikey>/study-queue/'
-resp = simplejson.load(urllib.request.urlopen(url))
+resp = json.loads(urllib.request.urlopen(url).read().decode('utf-8'))
 
 info = resp['requested_information']
 review_time = info['next_review_date']
