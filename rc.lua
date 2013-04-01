@@ -277,9 +277,12 @@ globalkeys = awful.util.table.join(
 --    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume 0 +5%") end ),
 --    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume 0 -- -5%") end ),
 --    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("/home/acalewin/bin/toggle-mute") end )
-    awful.key({}, "XF86AudioMute", function() pulseaudio.volumeMute() end),
-    awful.key({}, "XF86AudioLowerVolume", function() pulseaudio.volumeDown() end),
-    awful.key({}, "XF86AudioRaiseVolume", function() pulseaudio.volumeUp() end),
+--    awful.key({}, "XF86AudioMute", function() pulseaudio.volumeMute() end),
+--    awful.key({}, "XF86AudioLowerVolume", function() pulseaudio.volumeDown() end),
+--    awful.key({}, "XF86AudioRaiseVolume", function() pulseaudio.volumeUp() end),
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -q set Master 2dB+ unmute", false) end ),
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -q set Master 2dB- unmute") end ),
+    awful.key({}, "XF86AudioMute", function() awful.util.spawn('amixer -q set Master toggle') end ),
     awful.key({ modkey, "Control" }, "l", function() awful.util.spawn("/home/acalewin/bin/lock_script.sh") end )
 )
 
