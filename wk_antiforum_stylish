@@ -9,4 +9,7 @@
     #new-post-form{display:none !important;}
    /* hide the menu link */
     a[href='/community']{display:none !important}
+  /*hide post lesson forum stuff */
+    a[href='/chat']{display:none !important}
+    .forum-content, .forum-threads{display:none !important}
 }
