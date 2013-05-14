@@ -1,6 +1,8 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
 /* You can drop this into the Stylish FF plugin to hide the forums */
+/* For the Chrome version, remove the @-moz stuff and put the regular expression
+   (without the escaped slashes) into the Applies to box and set it match a regexp*/
 
 @-moz-document regexp('https?://(www\\.)?wanikani\\.com/.*') {
   /* hide the recent posts on the dashboard */
